@@ -1,0 +1,32 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ActionName</title>
+</head>
+<body>
+    <div>Controller: @ViewBag.Controller </div>
+    <div>Action:     @ViewBag.Action</div>
+
+    <div>
+        @*@Html.ActionLink("This is an outgoing URL", "Index", "Home",
+        "https", "myserver.mydomain.com", "myFragmentName", new { id = "MyId" },
+        new { id = "myAnchorId", @class = "myCSSClass" })*@
+        
+        @*This is a URL:
+        @Url.Action("Index", "Home", new{id = "MyId"})*@
+        
+        @*@Html.ActionLink("Click Me", "Index", "Customer")
+        @Html.RouteLink("Click Me","MyOtherRoute","Index", "Customer")*@
+        
+        @Html.ActionLink("Click Me", "GetLegacyURL", new{ legacyURL = "~/articles/Windows_3.1_Overview.hml"})
+    </div>
+
+</body>
+
+</html>
